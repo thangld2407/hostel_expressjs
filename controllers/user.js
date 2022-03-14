@@ -77,7 +77,7 @@ const login = async (req, res, next) => {
     user.isLoggedIn = true
     await user.save()
     res
-      .header('authorization', accessToken)
+      .header('Authorization', accessToken)
       .send({ success: true, accessToken, user })
   } catch (err) {
     console.log(err)
